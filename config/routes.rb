@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  resources :microposts
+  root 'users#index'
+  resources :users
+
+  # Allow Cloud9 connections.
+  # config.hosts.clear
 end
